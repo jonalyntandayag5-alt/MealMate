@@ -1,11 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MealMate</title>
+    <meta
+      name="description"
+      content="MealMate helps you plan balanced, delicious meals for your week."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand"><span class="dot"></span> MealMate</div>
+        <nav class="nav" aria-label="Main navigation">
+          <a href="#browse">Recipes</a>
+          <a href="#planner">Planner</a>
+          <a href="#">Nutrition</a>
+          <a href="#">Favorites</a>
+        </nav>
+        <button class="primary-btn">Build my menu</button>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div class="hero-copy">
+            <span class="eyebrow">Healthy living made easy</span>
+            <h1>Plan meals that fit your energy and your week.</h1>
+            <p>
+              Smart ingredients, balanced plates, and delicious weekly ideas without the
+              guesswork. Build a routine that feels good and tastes great.
+            </p>
+
+            <div class="action-row">
+              <button class="primary-btn" id="planTodayBtn">Plan today</button>
+              <button class="ghost-btn">View recipes</button>
+            </div>
+
+            <div class="mini-stats" aria-label="MealMate stats">
+              <div class="stat-box">
+                <strong>18</strong>
+                <span>smart recipes</span>
+              </div>
+              <div class="stat-box">
+                <strong>5x</strong>
+                <span>more efficient</span>
+              </div>
+              <div class="stat-box">
+                <strong>92%</strong>
+                <span>meal satisfaction</span>
+              </div>
+            </div>
+          </div>
+
+          <aside class="hero-card" aria-label="Today's focus card">
+            <div class="card-badge">Today's focus</div>
+            <h3>High-protein lunch</h3>
+            <ul>
+              <li>Salmon Power Plate</li>
+              <li>Leafy greens + roasted veg</li>
+              <li>Hydration goal: 2L</li>
+            </ul>
+          </aside>
+        </section>
+
+        <section class="browse" id="browse">
+          <div class="section-copy">
+            <div>
+              <span class="eyebrow">Recipe ideas</span>
+              <h2>Find something you’ll actually crave</h2>
+            </div>
+            <div class="search-wrap">
+              <input type="search" id="searchInput" placeholder="Search meals" aria-label="Search meals" />
+            </div>
+          </div>
+
+          <div class="filters" id="filters" aria-label="Meal filters"></div>
+          <div class="recipe-grid" id="recipeGrid"></div>
+        </section>
+
+        <section class="planner" id="planner">
+          <div class="planner-head">
+            <h2>Your weekly plan</h2>
+            <button class="secondary-btn" id="resetPlan">Reset week</button>
+          </div>
+
+          <div class="planner-grid">
+            <div class="meal-list" id="mealList"></div>
+
+            <aside class="side-panel">
+              <div class="panel-card">
+                <h3>Plan summary</h3>
+                <div class="score-row">
+                  <div class="score-box">
+                    <strong id="plannedMeals">0</strong>
+                    <span>Meals set</span>
+                  </div>
+                  <div class="score-box">
+                    <strong id="weeklyCalories">0 kcal</strong>
+                    <span>Calories</span>
+                  </div>
+                  <div class="score-box">
+                    <strong id="proteinTarget">0g</strong>
+                    <span>Protein</span>
+                  </div>
+                  <div class="score-box">
+                    <strong>7</strong>
+                    <span>Days tracked</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="panel-card">
+                <h3>Weekly balance</h3>
+                <div class="balance-meter">
+                  <div class="bar-group">
+                    <div class="bar-label"><span>Protein</span><span>80%</span></div>
+                    <div class="bar"><span style="width: 80%"></span></div>
+                  </div>
+                  <div class="bar-group">
+                    <div class="bar-label"><span>Veggies</span><span>72%</span></div>
+                    <div class="bar"><span style="width: 72%; background: linear-gradient(90deg, #4aa7ff, #8ab7ff);"></span></div>
+                  </div>
+                  <div class="bar-group">
+                    <div class="bar-label"><span>Hydration</span><span>68%</span></div>
+                    <div class="bar"><span style="width: 68%; background: linear-gradient(90deg, #7ad8ff, #a8e7ff);"></span></div>
+                  </div>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js" defer></script>
+  </body>
 </html>
